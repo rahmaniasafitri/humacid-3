@@ -6,6 +6,8 @@ namespace Database\Seeders;
 use App\Models\Kandungan;
 use App\Models\Manfaat;
 use App\Models\Petunjuk;
+use App\Models\Produk;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -23,6 +25,18 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        $users = [
+            [
+                'name'=>'Naufal Ulinnuha',
+                'email'=>'admin@naufal.dev',
+                'password'=>bcrypt('admin'),
+            ]
+        ];
+    
+        foreach ($users as $user) {
+            User::create($user);
+        }
         
         $kandungan = [
             ['value'=>'C-Organik : 13,22%'],
@@ -58,6 +72,19 @@ class DatabaseSeeder extends Seeder
     
         foreach ($petunjuk as $key => $pt) {
             Petunjuk::create($pt);
+        }
+
+        $produk = [
+            ['nama'=>'Produk 1','foto'=>'foto1.jpeg',],
+            ['nama'=>'Produk 2','foto'=>'foto2.jpeg',],
+            ['nama'=>'Produk 3','foto'=>'foto3.jpeg',],
+            ['nama'=>'Produk 4','foto'=>'foto4.jpeg',],
+            ['nama'=>'Produk 5','foto'=>'foto5.jpeg',],
+            ['nama'=>'Produk 6','foto'=>'foto6.jpeg',],
+        ];
+    
+        foreach ($produk as $pr) {
+            Produk::create($pr);
         }
 
     }

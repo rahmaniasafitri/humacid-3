@@ -187,11 +187,13 @@
 
         <div class="gallery-slider swiper">
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto2.jpeg"><img src="assets/img/foto2.jpeg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto3.jpeg"><img src="assets/img/foto3.jpeg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto1.jpeg"><img src="assets/img/foto1.jpeg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto4.jpeg"><img src="assets/img/foto4.jpeg" class="img-fluid" alt=""></a></div>
-            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/foto6.jpeg"><img src="assets/img/foto6.jpeg" class="img-fluid" alt=""></a></div>
+            @foreach ($produk as $pr)
+              <div class="swiper-slide">
+                <a class="glightbox" data-gallery="images-gallery" href="assets/img/produk/{{ $pr->foto }}">
+                  <img src="assets/img/produk/{{ $pr->foto }}" class="img-fluid" alt="">
+                </a>
+              </div>
+            @endforeach
           </div>
           <div class="swiper-pagination"></div>
         </div>
