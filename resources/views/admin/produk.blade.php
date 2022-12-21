@@ -12,8 +12,8 @@
 			<tr>
 				<th>Nama</th>
 				<th>Foto</th>
-				<th style="width: 200px">Tanggal Dibuat</th>
-				<th style="width: 200px">Tanggal Diedit</th>
+				<th style="width: 210px">Tanggal Dibuat</th>
+				<th style="width: 210px">Tanggal Diedit</th>
 				<th class="text-center">Action</th>
 			</tr>
 		</thead>
