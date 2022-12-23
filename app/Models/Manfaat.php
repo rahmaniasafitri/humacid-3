@@ -10,5 +10,6 @@ class Manfaat extends Model
     use HasFactory;
 
     public $table = "manfaat";
+    protected $guarded = ['id'];
     public $timestamps = false;
 }
