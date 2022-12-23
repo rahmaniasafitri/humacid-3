@@ -55,7 +55,7 @@ class DashboardPost extends Controller
             Petunjuk::create($validatedData);
             return ['status'=>'success','message'=>'Petunjuk berhasil ditambahkan']; 
         }else{
-            return ['status'=>'error','message'=>'Produk gagal ditambahkan'];
+            return ['status'=>'error','message'=>'Post gagal ditambahkan'];
         }
     }
 
@@ -69,25 +69,25 @@ class DashboardPost extends Controller
         if($request->tipe=="k"){
             if(Kandungan::find($request->id)){
                 Kandungan::find($request->id)->update($validatedData);   
-                return ['status'=>'success','message'=>'Produk berhasil diedit']; 
+                return ['status'=>'success','message'=>'Post berhasil diedit']; 
             }else{
-                return ['status'=>'error','message'=>'Produk tidak ditemukan'];
+                return ['status'=>'error','message'=>'Post tidak ditemukan'];
             }; 
         }
         if($request->tipe=="m"){
             if(Manfaat::find($request->id)){
                 Manfaat::find($request->id)->update($validatedData);   
-                return ['status'=>'success','message'=>'Produk berhasil diedit']; 
+                return ['status'=>'success','message'=>'Post berhasil diedit']; 
             }else{
-                return ['status'=>'error','message'=>'Produk tidak ditemukan'];
+                return ['status'=>'error','message'=>'Post tidak ditemukan'];
             };  
         }
         if($request->tipe=="p"){
             if(Petunjuk::find($request->id)){
                 Petunjuk::find($request->id)->update($validatedData);   
-                return ['status'=>'success','message'=>'Produk berhasil diedit']; 
+                return ['status'=>'success','message'=>'Post berhasil diedit']; 
             }else{
-                return ['status'=>'error','message'=>'Produk tidak ditemukan'];
+                return ['status'=>'error','message'=>'Post tidak ditemukan'];
             }; 
         }
     }
@@ -102,25 +102,25 @@ class DashboardPost extends Controller
         if($request->tipe=="k"){
             if(Kandungan::find($request->id)){
                 Kandungan::destroy($request->id);
-                return ['status'=>'success','message'=>'Produk berhasil dihapus'];
+                return ['status'=>'success','message'=>'Post berhasil dihapus'];
             }else{
-                return ['status'=>'error','message'=>'Produk tidak ditemukan'];
+                return ['status'=>'error','message'=>'Post tidak ditemukan'];
             }
         }
         if($request->tipe=="m"){
             if(Manfaat::find($request->id)){
                 Manfaat::destroy($request->id);
-                return ['status'=>'success','message'=>'Produk berhasil dihapus'];
+                return ['status'=>'success','message'=>'Post berhasil dihapus'];
             }else{
-                return ['status'=>'error','message'=>'Produk tidak ditemukan'];
+                return ['status'=>'error','message'=>'Post tidak ditemukan'];
             }
         }
         if($request->tipe=="p"){
             if(Petunjuk::find($request->id)){
                 Petunjuk::destroy($request->id);
-                return ['status'=>'success','message'=>'Produk berhasil dihapus'];
+                return ['status'=>'success','message'=>'Post berhasil dihapus'];
             }else{
-                return ['status'=>'error','message'=>'Produk tidak ditemukan'];
+                return ['status'=>'error','message'=>'Post tidak ditemukan'];
             }
         }
     }
